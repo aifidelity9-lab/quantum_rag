@@ -1,0 +1,60 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "RAG: Ingest Sample",
+      "type": "python",
+      "request": "launch",
+      "module": "quantum_rag.cli",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": [
+        "ingest",
+        "--input",
+        "src/sample_quantum.txt",
+        "--name",
+        "demo_quantum"
+      ]
+    },
+    {
+      "name": "RAG: Ask Sample",
+      "type": "python",
+      "request": "launch",
+      "module": "quantum_rag.cli",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": [
+        "ask",
+        "--name",
+        "demo_quantum",
+        "--question",
+        "What is a wave function?"
+      ]
+    },
+    {
+      "name": "RAG: Chat Sample",
+      "type": "python",
+      "request": "launch",
+      "module": "quantum_rag.cli",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": [
+        "chat",
+        "--name",
+        "demo_quantum"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Create venv",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "venv",
+        ".venv"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Install dependencies",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": [
+        "-m",
+        "pip",
+        "install",
+        "-e",
+        "."
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Ingest sample",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": [
+        "-m",
+        "quantum_rag.cli",
+        "ingest",
+        "--input",
+        "src/sample_quantum.txt",
+        "--name",
+        "demo_quantum"
+      ],
+      "options": {
+        "env": {
+          "PYTHONPATH": "${workspaceFolder}/src"
+        }
+      },
+      "problemMatcher": []
+    }
+  ]
+}

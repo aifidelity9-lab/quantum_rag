@@ -1,0 +1,5 @@
+The wave function in quantum mechanics is a mathematical object used to encode the state of a system.
+According to the Born rule, the absolute square of the wave function gives a probability density.
+The Schrodinger equation governs the time evolution of the wave function in non-relativistic quantum mechanics.
+Operators correspond to observables, and measurement outcomes are associated with eigenvalues of those operators.
+The uncertainty principle limits simultaneous knowledge of certain pairs of observables such as position and momentum.
